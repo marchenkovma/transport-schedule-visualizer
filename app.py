@@ -26,7 +26,7 @@ colors = generate_unique_colors(len(transport_times))
 # Создает новую фигуру (график) с заданными размерами (шириной 60 дюймов и высотой 8 дюймов)
 plt.figure(figsize=(60, 8))
 
-# Добавляет точки на график для каждого транспорта и подписи времени
+# Добавляет точки на графике для каждого транспорта и подписи времени
 for i, (transport, times) in enumerate(transport_times.items(), start=1):
     decimal_times = [time_to_decimal(t) for t in times]
     plt.scatter(decimal_times, [i] * len(decimal_times), label=transport, color=colors[i - 1], s=100, marker=marker)
@@ -63,7 +63,7 @@ plt.savefig(output_filename, dpi=300, bbox_inches='tight')
 
 # Показывает график
 # По умолчанию выключена, чтобы включить нужно раскомментировать функцию
-plt.show()
+#plt.show()
 
 # Разрезает изображение на части для печати на A4
 # По умолчанию выключена, чтобы включить нужно раскомментировать функцию
